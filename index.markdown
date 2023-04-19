@@ -5,7 +5,7 @@
 layout: default
 title: Home
 ---
-
+<!-- 
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -37,4 +37,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->
