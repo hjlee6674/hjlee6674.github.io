@@ -4,13 +4,13 @@ layout: default
 <ul class="posts-list">
   
   {% assign category = page.category | default: page.title %}
-  {% for post in site.categories[category] %}
+  {% for post in site.categories[category] %}<!-- categroy가 해당 파일(/category)의 title과 같은 파일(\_posts)을 불러옴 -->
     <li>
       <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
+        <a href="{{ site.baseurl }}{{ post.url }}"><!-- "파일(\_posts)의 링크" -->
+          {{ post.title }}<!-- "파일(\_posts)의 title" -->
         </a>
-        <small>{{ post.date | date_to_string }}</small>
+        <small>{{ post.date | date_to_string }}</small><!-- "파일(\_posts)의 date" -->
       </h3>
     </li>
   {% endfor %}

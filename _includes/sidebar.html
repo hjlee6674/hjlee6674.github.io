@@ -9,22 +9,50 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
-
+    <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a> 
+  <!--<class="{페이지  title이 Home이면}                     활성화"                 "{{페이지 링크}}"          >이름-->
+    
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
+    
 
-    {% assign pages_list = site.pages | sort:"url" %}
+    {% assign pages_list = site.pages | sort:"url" %} 
+    <!-- { % 모든 페이지의 목록 출력 | url에 따라 오름차순 정렬 % }-->
     {% for node in pages_list %}
+<!--{ % 페이지 리스트에서(in pages_list) 각 페이지의(for) 속성정보(node)에 대해 % }-->
       {% if node.title != null %}
-        {% if node.layout == "page" %}
+  <!--{ % title이 null이 아니면} -->
+        {% if node.layout == "category" %}
+    <!--{ % layout이 page이면} -->
           <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+      <!--<  "sidebar-nav-item 생성 {\% page.url이 node.url이면} 활성화" href="{{node.url은 | 절대 경로}}">{{이름=node.title}} -->
         {% endif %}
       {% endif %}
     {% endfor %}
+<!--
+  Home
+  ...   
+  About
+ -->
 
+
+
+
+    {% assign pages_list = site.pages | sort:"url" %} 
+    <!-- { % 모든 페이지의 목록 출력 | url에 따라 오름차순 정렬 % }-->
+    {% for node in pages_list %}
+<!--{ % 페이지 리스트에서(in pages_list) 각 페이지의(for) 속성정보(node)에 대해 % }-->
+      {% if node.title != null %}
+  <!--{ % title이 null이 아니면} -->
+        {% if node.title == "About" %}
+    <!--{ % layout이 page이면} -->
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+      <!--<  "sidebar-nav-item 생성 {\% page.url이 node.url이면} 활성화" href="{{node.url은 | 절대 경로}}">{{이름=node.title}} -->
+        {% endif %}
+      {% endif %}
+    {% endfor %}
     <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
   </nav>
