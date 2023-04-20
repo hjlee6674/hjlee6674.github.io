@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Markdown 1"
-categories: first
+categories: Study
 ---
 # 목차
 - [목차](#목차)

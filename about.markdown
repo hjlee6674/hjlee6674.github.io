@@ -3,6 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
+2018.03 ~ 물리학과 학부생, 수학과 복수전공
+
+2021.12 ~ HTG 참여
+
+QCD, chiral quark-soliton model, quantum field theory, string theory, ...
+
+
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
