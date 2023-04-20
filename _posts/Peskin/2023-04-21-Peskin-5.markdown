@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "3.1 Lorentz invariance in Wave Equations"
+categories: Peskin
+use_math: true
+mathjax: true
+---
+# 3. The Dirac Field
+
+## 3.1 Lorentz invariance in Wave Equations
+
+임의의 *transformation*에 대해 *equation*이 *invariant*하다는 것은 그 *equation*에 *transformation*을 가하더라도 **형태가 일정하게 유지됨을 의미한다**.  예를 들어, $F=ma$는 *position transition* $x\longrightarrow x+a$에 대해 *invariant*하다. *Special relativity*에서 우리는 서로 다른 운동상태에 있는 좌표계 사이의 *transformation*인 *Lorentz transformation*에 대해 배웠고 이에 대해 *invariant*한 대표적인 *quantity*로 *interval*에 대해 알아보았다.
+
+$$
+(ds')^2=dx'_\mu dx'^\mu
+=a^\alpha_\mu dx_\alpha
+a^\mu_\beta dx^\beta
+=a^\alpha_\mu a^\mu_\beta dx_\alpha dx^\beta=dx_\alpha dx^\alpha=ds^2
+$$
+
+우리의 목표는 이를 *field theory*에 접목시키는 것이다. 그리고 다음과 같은 자연스러운 질문이 떠오른다: ***Lorentz transformation*에 대해 *invariant*한 *equation*이 존재하는가?** 그런 *equation*이 존재한다면, 이는 *special relativity*에서 다루는 모든 좌표계에서 만족하는 equation이 존재한다는 것이다. 마치 **$F=ma$가 외력이 없는 *3-dimensional Euclidean space*에서 성립하는 것처럼.** 이 방정식을 찾기 위해 *active Lorentz transformation*에서 다양한 *quantity*들이 어떻게 영향을 받는지 알아볼 것이다. 
+
+----------------------------------------
+<aside>
+💡 **_Active transformation_**
+*Active transformation*은 대상에 작용하고 *passive transformation*은 좌표계에 작용한다. 다음과 같은 *transformation*을 다룬다고 하자.
+
+$$
+x'=\Lambda x
+$$
+
+*Active transformation*은 *field* $\phi(x)$를 변화시키고 좌표는 그대로 유지하므로 *transform*한 *field*를 $\phi'(x)$라고 쓸 수 있다. *Rotation*을 예시로 생각했을 때, $\phi(x_0)$는 *rotation*의 영향을 받아 $\phi'(x_0')$과 같아진다. 즉,
+
+$$
+\phi(x_0) = \phi'(x'_0)
+$$
+
+이다. *Rotation*을 예시로 한 이유는 앞으로 다룰 *Lorentz transformation*이 4-*dimensional Minkovski space*에서의 *rotation*으로 볼 수 있기 때문이다. 따라서 *active*한 관점으로 바라본 *field transformation*은 다음과 같이 쓸 수 있다.
+
+$$
+\phi(x)\longrightarrow \phi'(x)=\phi(\Lambda^{-1} x).
+$$
+
+$\Lambda^{-1}$이 *argument*에 가해진 이유는 *transformation* 이후 $x$에서의 *field*가 *transformation*하기 전($\Lambda$를 가하기 전)의 *field*와 같기 때문이다. *Passive transformation*은 반대로 생각하면 된다.
+</aside>
+
+----------------------------------------
+
+*Least action principle*에서 시작해보자. 이 원리가 항상 유효하려면 *Lorentz transformation*에 대해 *invariant*하여 모든 좌표계에서 성립해야 한다. 이는 *Lagrangian*이 *invariant*하다는 사실을 알려준다. *Lagrangian*이 *transformation*에 대해 *invariant*하다면 *Lagrangian*의 *argument*인 *field*가 극한인 위치가 *transform*되어도 *field*는 그대로 극한을 유지할 것이다. 예를 들어, *field* $\phi(x)$가 $x_0$에서 극한이라면 *Lorentz transformation*을 가한 $x'_0 = \Lambda x_0$에서도 $\phi(x)$는 극한이다.
+
+*Klein-Gordon theory*를 살펴보자. *Lorentz transformation*은 다음과 같이 쓰여진다.
+
+$$
+x^\mu\longrightarrow x'^\mu=\Lambda^\mu_\nu x^\nu
+$$
+
+이에 관련된 *field transformation*은
+
+$$
+\phi(x)\longrightarrow \phi'(x)=\phi(\Lambda^{-1}x)
+
+$$
+
+로 쓸 수 있다. 

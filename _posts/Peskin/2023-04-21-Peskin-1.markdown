@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "2.1 The Necessity of the Field Viewpoint"
+categories: Peskin
+use_math: true
+mathjax: true
+---
+# 2. The Klein-Gordon Field
+
+## 2.1 The Necessity of the Field Viewpoint
+*QM*의 기초적인 과정이 입자의 *dynamical system*의 양자화와 관련이 있다는 것과 같은 흐름으로, *QFT*는 *field*의 *dynamical system*에 대한 *QM*의 응용이다. *QFT*는 *QM*의 현황을 파악하는데 반드시 필요하다. 
+우리가 매우 작은 *scale(QM)*과 매우 큰 에너지*(relativistic)*에서 발생하는 과정을 이해하기를 원한다는 것을 고려하였을 때, 왜 *field quantization*을 공부해야 하는지 물을 수 있다. 왜 우리는 *nonrelativistic particle*을 양자화하는 방법으로 *relativistic particle*을 양자화할 수 없는 것일까?
+이 질문은 높은 수준에서 대답할 수 있다. 아마 가장 좋은 접근 방법은 *single-particle relativistic wave equation*이 *negative-energy state*와 다른 모순적인 상황이 도출되는 것을 보는 것이다. 이는 *graduate-level QM*의 끝에서 다루지만 왜 이런 방법이 작동하지 않는지 이해하기 쉽다. 우리는 $E=mc^2$가 *particle-antiparticle* 쌍을 생성할 수 있도록 하기 때문에 임의의 상대론적 과정이 *single particle*로 설명할 수 있다고 가정할 수 없다. *pair-creation*에 충분한 에너지가 없다고 하더라도 *second-order perturbation theory*의 중간 과정처럼 *multiparticle state*가 나타날 수 있다. 우리는 이런 *state*가 *uncertainty principle*에 의해 아주 짧은 시간에만 존재한다고 생각할 수 있다. *Perturbation theory*의 *order*를 더 높여가며 접근할 수록 임의의 많은 *‘virtual particle’*이 생성될 수 있다.
+*Multiparticle theory*의 필요성은 인과성의 고려로부터 그리 명백하지 않은 방법으로 야기된다. $\mathbf x_0$에서 $\mathbf x$로 *propagate*하는 입자의 *amplitude*는
+
+
+
+$$
+U(t) = \left<\mathbf x\left|e^{-iHt}\right|\mathbf x_0\right>
+$$
+
+
+
+이다. *Nonrelativistic QM*에서 우리는 $H=\mathbf{p}^2/2m$으로 정의하였으므로
+
+$$
+\begin{align*}  U(t) &= \left<\mathbf{x}\left|e^{-i(\mathbf{p}^2/2m)t}  \right| \mathbf{x_0}\right> \\  &=\int \frac{d^3p}{(2\pi)^3}\left<\mathbf{x}\left|e^{-i(\mathbf{p}^2/2m)t}  \right| \mathbf{p}\right>\left<\mathbf{p}|\mathbf{x_0}\right> \\  &=\frac{1}{(2\pi)^3}\int d^3p e^{-i(\mathbf{p}^2/2m)t}\cdot  e^{i\mathbf{p}\cdot(\mathbf{x}-\mathbf{x_0})} \\  &=\left(\frac{m}{2\pi it}\right)^{\frac{3}{2}}  e^{im(\mathbf{x}-\mathbf{x_0}^2)/2t}\end{align*}
+$$
+
+와 같이 *amplitude* $U(t)$를 계산할 수 있다. *Relativistic QM*에서 우리는 *causality*가 위반되는 결론을 얻을 수 있다. 여기서는 $E=\sqrt{p^2+m^2}$이므로
+
+$$
+\begin{align*}  U(t) &= \left<\mathbf{x}\left|e^{-it\sqrt{\mathbf{p}^2+m^2}}  \right| \mathbf{x_0}\right> \\  &=\frac{1}{(2\pi)^3}\int d^3p e^{-it\sqrt{\mathbf{p}^2+m^2}}\cdot  e^{i\mathbf{p}\cdot(\mathbf{x}-\mathbf{x_0})} \\  &=\frac{1}{2\pi^2|\mathbf{x}-\mathbf{x_0}|}  \int^\infty_0dp\,p\,\sin(p|\mathbf{x}-\mathbf{x_0}|)e^{-it\sqrt{p^2+m^2}}\end{align*}
+$$
+
+인데 이 적분은 *Bessel function*으로 표현할 수 있다. 우리는 $x^2\gg t^2$, *light cone*의 확실한 바깥 영역에서 점근적인 양상을 볼 것이다. *Phase function* $px-t\sqrt{p^2+m^2}$는 $p=imx/\sqrt{x^2-t^2}$에서 *stationary point*를 가지고 *contour*를 위로 올려 이 점을 지나게 할 수 있다. 따라서 우리는 다음을 발견할 수 있다.
+
+$$
+U(t) = e^{-m\sqrt{x^2-t^2}}
+$$
+
+이 *propagation amplitude*는 매우 작지만 *spacelike*인 영역에서 $0$이 아니므로 *causality*를 위반한다.
+
+*QFT*는 2.4에서 보게될 흥미로운 방법으로 이 문제를 해결한다. 간단하게 말하자면 *multiparticle field theory*에서  *spacelike interval*을 지나는 *particle propagation*이 반대로 향하는 *antiparticle propagation*과 구별할 수 없다.  $\mathbf x_0$에서의 관측이 $\mathbf x$에서의 관측에 영향을 주는지 물을 수도 있지만 *particle propagation*과 *antiparticle propagation*이 서로 *cancel*되어 *causality*가 보존된다.
+
+또한 *QFT*는 *multiparticle states*와 다른 갯수의 *particle state* 사이의 *transition*을 조정하는 자연스러운 길을 제공한다. 이는 *antiparticle*을 도입하여 *causality problem*을 해결하고 *spin*과 *statistics* 사이의 관계를 설명한다. 하지만 가장 중요한 것은, 수많은 *scattering cross section, lifetime*과 같은 물리량들을 계산하는데 필요한 도구를 제공한다는 점이다.
+
+
+
+
+
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Jekyll requires blog post files to be named according to the following format:
+
+`YEAR-MONTH-DAY-title.MARKUP`
+
+Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/ -->

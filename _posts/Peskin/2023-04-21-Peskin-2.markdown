@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "2.2 Elements of Classical Field Theory"
+categories: Peskin
+use_math: true
+mathjax: true
+---
+## 2.2 Elements of Classical Field Theory
+
+### Lagrangian Field Theory
+
+### Hamiltonian Field Theory
+
+### Noether’s Theorem
+
+*Field* $\phi$의 *continuous infinitesimal transformation*을 고려해보자.
+
+$$
+\phi(x)\longrightarrow \phi'(x)
+= \phi(x)+\alpha\Delta\phi(x)
+$$
+
+만약 이 *transformation*이 *equation of motion*에 적용되더라도 *equation*을 변화시키지 않는다면(*invariant*), 이 *transformation*을 ***symmetry***라고 부를 것이다. 이는 *action*이 위의 *transformation*에 불변일 때 특히나 보장된다. 더 일반적으로, 우리는 *action*이 *surface term*에 의해 변하도록 허용할 수 있는데 *surface term*은 *Euler-Lagrange equation*에 영향을 주지 않기 때문이다. 따라서 Lagrangian은 위의 transformation에 의해 다음과 같이 써질 수 있다.
+
+$$
+\mathcal{L}(x)\longrightarrow \mathcal{L}'(x)
+= \mathcal{L}(x)+\alpha\partial_\mu\mathcal{J}^\mu(x)
+$$
+
+이제 Lagrangian의 변화 $\Delta\mathcal{L}$는 
+
+$$
+\begin{align*}  \alpha\Delta\mathcal{L}& = \frac{\partial \mathcal{L}}{\partial \phi}  (\alpha\Delta\phi)+\left(\frac{\partial\mathcal{L}}  {\partial(\partial_\mu\phi)}\right)\partial_\mu(\alpha\Delta\phi) \\  &=\alpha\partial_\mu\left(\frac{\partial\mathcal{L}}  {\partial(\partial_\mu\phi)}\Delta\phi\right)+\alpha\left[    \frac{\partial\mathcal{L}}{\partial\phi}-\partial_\mu\left(      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}    \right)  \right]\Delta\phi\end{align*}
+$$
+
+두번째 항은 *Euler-Lagrange equation*에 의해 사라지고 남은 부분 Lagrangian의 변화와 같으므로 다음과 같이 정리할 수 있다.
+
+$$
+\begin{align*}  \alpha\partial_\mu\mathcal{J}^\mu(x)=\alpha\partial_\mu  \left(\frac{\partial\mathcal{L}}  {\partial(\partial_\mu\phi)}\Delta\phi\right)\end{align*}
+$$
+
+따라서 우리는 다음을 알 수 있다.
+
+$$
+\partial_\mu  \left(\frac{\partial\mathcal{L}}  {\partial(\partial_\mu\phi)}\Delta\phi  -\mathcal{J}^\mu(x)\right)  =0
+$$
+
+Current $j^\mu(x)$는 다음과 같이 정의할 수 있다.
+
+$$
+  j^\mu(x) = \frac{\partial\mathcal{L}}  {\partial(\partial_\mu\phi)}\Delta\phi  -\mathcal{J}^\mu(x)
+$$
+
+
+
+
+
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Jekyll requires blog post files to be named according to the following format:
+
+`YEAR-MONTH-DAY-title.MARKUP`
+
+Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/ -->
