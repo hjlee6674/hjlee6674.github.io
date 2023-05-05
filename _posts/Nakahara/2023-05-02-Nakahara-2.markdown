@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "5. Manifold"
+categories: Nakahara
+use_math: true
+mathjax: true
+---
+수학을 배우다 보면 Manifold라는 개념을 자주 접하게 된다. 위상수학에서도 보고
+미분기하학에서도 보고 심지어는 물리학에서도 볼 때가 있지만, 정작 그 개념을
+이해하기에는 많은 기초 지식이 필요하더라. 그래서 '그냥 중요한 수학적 객체' 정도로만
+생각하고 있었는데 이 책을 통해서 이 개념에 조금이나마 가까이 다가가보려 한다.
+
+Manifold는 curve나 surface 같은 임의의 dimensional object에 대한 익숙한 감각의
+일반화이다. 3차원 Euclidean space에서 curve는 하나의 parameter로 표현가능한 무언가이다.
+$(x(t),y(t),z(t))$로 쓰곤 하는데 여기서 $t$가 parameter이다. surface는 두 개의 parameter로
+표현가능한 무언가이다. curve와 유사하게 $(x(u,v),y(u,v),z(u,v))$의 꼴을 가진다.
+Curve와 surface는 $\mathbb{R}$와 $\mathbb{R}^2$에서 각각 locally homeomorphic하다.
+Manifold는 $\mathbb{R}^m$에서 locally homeomorphic한 topological space이다.
+이 local homeomorphism으로부터 우리는 manifold의 각 점에 coordinate라고 부르는
+$m$개의 숫자의 집합을 부여할 수 있다. 다만 manifold가 globally homeomorphic하지 않다면
+이 coordinate를 여러개 도입해야 한다. 따라서 manifold 위의 어느 한 점이 여러 coordinate를
+가지는 것이 가능하다. 이 때 이 coordinate 사이의 transition을 정의할 수 있는데 우리는
+smooth transition이 필요하다. 이후에 보겠지만, 이 smooth transition은 manifold에 익숙한
+연산(미적분)을 적용할 수 있도록 한다. Topology가 continuity에 토대를 둔 것처럼,
+manifold theory는 smoothness에 토대를 두고 전개된다.
+
+## Definition
+**$m$-dimensional differentiable manifold** $M$은 다음 조건을 만족한다.
+1. $M$은 **topological space**이다.
+2. $M$은 $\\{(U_i,\phi_i)\\}$와 함께 정의된다.
+$\\{U_i\\}$는 $M$을 **cover**하는 open set의 모임으로 $\cup_iU_i=M$이며
+$\phi_i$는 $U_i$에서 open subset $U'_i$로 onto하는 **homeomorphism**이다.
+1. $U_i\cap U_j\neq\phi$인 $U_i$와 $U_j$에 대해 map $\psi_{ij}=
+\phi_i\circ \phi_j^{-1}$은 **무한 번 미분가능**하다. $\phi_i=\phi_i(U_i\cap U_j)$, $\phi_j=\phi_i(U_i\cap U_j)$이다.

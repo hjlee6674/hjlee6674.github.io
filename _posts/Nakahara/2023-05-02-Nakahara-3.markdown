@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "2.3 Topology"
+categories: Nakahara
+use_math: true
+mathjax: true
+---
+물리학에서 기본적으로 깔고가는 모든 space는 metirc과 함께 주어진다고 가정하지만, 수학에서 이는 당연하지 않다. 사실 metric space는 manifold의 subset을 구성하고 manifold는 topological space의 subset을 구성한다.
+
+## Definition
+$X$를 임의의 집합, $\mathcal{T}=\\{U_i|i\in I\\}$를 $X$의 subset의 모임이라고 하자. $\mathcal{T}$가 다음의 조건을 만족할 때 ,$(X,\mathcal{T})$를 **topological space**라 부른다.
+1. $\phi, X\in \mathcal{T}$.
+2. $\cup_jU_j\in\mathcal{T}$.
+3. $\cap_jU_j\in\mathcal{T}$.
+
+$U_i$는 **open set**이라 부르고 $\mathcal{T}$는 $X$의 **topology**라 부른다.
+
+open set이 무엇인지는 수학을 배우면서 이미 알고 있었겠지만 topology에서 이 개념을 재정의한다. 이제부터 open set은 '양 끝 원소를 포함하지 않는 집합'의 느낌이 아니라, 그저 **$\mathcal{T}$의 원소** 이다. 훨씬 일반화된 개념이고 이해할 것도 없이 이는 받아들이는게 정신건강에 좋다. 만약 $[a,b]\in \mathbb{R}$이 $\mathcal{T}$의 원소라면, $[a,b]$는 open set이다.
+
+## Definition
+**Metric** $d: X \times X \rightarrow \mathbb{R}$은 임의의 $x,y,z\in X$에 대해 다음 조건을 만족하는 **function**이다.
+1. $d(x,y)=d(y,x)$.
+2. $d(x,y)\geq 0 \Longleftrightarrow x=y$.
+3. $d(x,y)+d(y,z)\geq d(x,z)$.
+
+$X$가 metric $d$를 가지고 있다면, $X$는 *open disc* $U_\epsilon(X)=\\{y\in X | d(x,y)<\epsilon\\}$를 open set으로 하는
+topological space가 된다. 이 때 정의된 topology $\mathcal{T}$를 **metric topology**라 부르고 topological space $(X,\mathcal{T})$를 **metric space**라고 부른다.

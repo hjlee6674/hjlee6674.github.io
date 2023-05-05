@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "Hausdorff space"
+categories: Topology
+use_math: true
+mathjax: true
+---
+
+Hausdorff space는 위상수학에서 주로 다루게 되는 space이다. 이 space가 어떻게 정의되는지
+먼저 살펴보자.
+<div class="def">
+<strong>
+Definition.
+</strong>
+다음 조건을 만족하는 space $X$를 <strong>Hausdorff space</strong>라 부른다.
+<p>
+서로 다른 point $x_1$, $x_2$에 대하여 각각의 neighborhood $U$, $V$가 
+서로 만나지 않는다. 
+</p>
+<p>
+$\forall x_1,x_2\in X, \exists U,V, x_1\in U, x_2\in V, U\cap V =\phi$.
+</p>
+</div>
+
+이 정의를 **$T_2$-공리**라 부르기도 한다. 이 정의는 space를 정의하는 방법 중 하나로
+이와 유사한 $T_1$-공리가 있다. $T_1$-공리에 의해 정의되는 space는 $U\cap V =\phi$ 조건 대신,  
+$x_1\notin V,x_2\notin U $ 조건이 들어간다. 임의의 point $x_1, x_2$와 이 point를
+중심으로 하는 neighborhood가 서로의 point를 포함하지 않는다는 뜻이다. 
+
+조금만 생각해보자.
+두 집합 $U,V$가 서로에 포함된 어느 point를 포함하지 않아도 두 집합이 공통으로 포함하는 point는 존재할 수 있다.
+하지만, 두 집합 $U,V$가 공통으로 포함하는 point를 가지지 않는다면($U\cap V =\phi$), 당연히 서로에 포함된
+어느 point도 포함할 수 없다. 
+
+정리하자면, $T_2$-공리를 만족하는 space(Hausdorff space)는 $T_1$-공리를 자연스럽게
+만족한다. 
+$T_1$, $T_2$의 numbering은 다음의 규칙을 따르도록 되어있다:
+*$i>j$이면, $T_i$-공리를 만족하는 space는 $T_j$-공리를 만족한다.*
+지금 알아둘 필요는 없지만 상식 선에서 기억하고 있으면 도움이 되지 않을까?
+
+이 $T_1$-공리가 만족하는 간단한 성질이 있다.
+
+<div class="thm">
+<strong>
+Theorem.
+</strong>
+다음은 동치이다.
+<ol>
+    <li>Space $X$가 $T_1$-공리를 만족한다.</li>
+    <li>Space $X$ 안의 모든 one-point set은 closed이다.</li>
+    <li>Space $X$ 안의 모든 finite set은 closed이다.</li>
+</ol>
+</div>
+<div class="prf">
+<strong>
+Proof.
+</strong>
+       <dl>
+           <dt>1 $\Longrightarrow$ 2</dt>
+           <dd>$x_1\in X$, $A=\{x_1\}$라 하자.
+           $x_1\neq x_2$인 point $x_2\in X$는 
+           $x_2\notin A$이다. $X$가 Hausdorff space이므로 
+           $x_1$, $x_2$의 neighborhood $U$, $V$는 다음을 만족한다.
+           <p>
+           $U\cap V = \phi,\,\,\,\{x_1\}\cap V = \phi.$
+           </p>
+           $\{x_1\}\cap V = \phi$와 closed set의 정의에 의해
+           $\{x_1\}$는 closed이다.
+           </dd>
+           <dt>1 $\Longleftarrow$ 2</dt>
+           <dd>
+           $x_1\neq x_2$에 대해 $\{x_1\}$, $\{x_2\}$는 closed라 하자.
+           $\{x_1\}$, $\{x_2\}$가 closed이므로 $x_1$와 $x_2$의 
+           neighborhood $U$, $V$는 각각 $x_2$, $x_1$을 포함하지 않는다.
+           즉, $x_1\notin V$이고 $x_2\notin U$이고 이는 $T_2$-공리와
+           일치한다. $\square$
+           </dd>
+       </dl>
+</div>
+
+3이 1,2와 동치임은 closed의 성질을 생각해보면 간단하다. {$\{x_i\}$}가 모두 closed이면 {$\{x_i\}$}의
+union인 $\cup_i$ {$\{x_i\}$}도 closed이므로 2가 성립하면 3이 성립한다. 이제 3이 성립한다 해보자.
+모든 finite set이 closed이고 closed set의 intersection은 closed이므로 finite set을 
+intersect하여 만든 one-point set은 closed이다. 따라서 3이 성립하면 2도 성립한다.
+
+이를 정리하자면,
+**$T_1$-공리를 만족하는 space에서 모든 one-point set은 어떤 limit point도 포함하지 않는다.**
+
+$T_1$-공리의 성질을 보여주는 theorem이 몇 가지 더 있다.
+
+<div class="thm">
+<strong>
+Theorem.
+</strong>
+다음은 동치이다.
+
+</ol>
+</div>
+<div class="prf">
+<strong>
+Proof.
+</strong>
+       <dl>
+           <dt></dt>
+           <dd>
+           </dd>
+           <dt></dt>
+           <dd>
+           </dd>
+       </dl>
+</div>

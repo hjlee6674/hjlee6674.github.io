@@ -38,3 +38,8 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # gem "jekyll-theme-lanyon", "~> 1.1"
 
 gem "webrick", "~> 1.8"
+
+
+#########################################################################################3
+# bundle install
+# bundle exec jekyll serve

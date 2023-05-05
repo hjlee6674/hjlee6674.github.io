@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "2.1 Maps"
+categories: Nakahara
+use_math: true
+mathjax: true
+---
+## 1. Defiintion
+$X$와 $Y$를 집합이라 하자. **_map_** $f$는 각각의 $x\in X$에 $y\in Y$를 할당하는 규칙이다.
+이를 다음과 같이 쓸 수 있다.
+
+$$
+\begin{align}
+f:X\longrightarrow Y.
+\end{align}
+$$
+
+만약 $f$의 explicit한 수식이 있다면 다음과 같이 쓰기도 한다.
+
+$$
+\begin{align}
+f:x\longmapsto f(x).
+\end{align}
+$$
+
+$f(x)$에 해당 수식이 들어간다. 
+
+이 때 집합 $X$를 _domain_, $Y$를 _range_ 라 부른다.
+
+이 mapping에 의해 대응되는 $x$와 $y$의 집합에는 또 다른 이름이 붙는다.
+
+우선 $y$의 집합인 $f(X)=\\{y\in Y|y=f(x) \\}$는 _image_ 라 하고
+$y\in Y$에 대응되는 $x\in X$의 집합 $f^{-1}(y)=\\{x\in X|f(x)=y \\}$를 $y$의 _inverse image_
+라고 부른다. 
+
+같은 $y\in Y$에 하나 이상의 $x\in X$가 대응될 수도 있다.
