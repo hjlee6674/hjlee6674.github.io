@@ -281,7 +281,7 @@ blockquote p:last-child {
 }
 @media (min-width: 30em) {
   .prf {
-    padding-right: .5rem;
+    padding-right:5rem;
     padding-left: 2.5rem;
   }
 }

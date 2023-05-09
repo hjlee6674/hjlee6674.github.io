@@ -1,10 +1,40 @@
 ---
 layout: post
-title:  "Hausdorff space"
+title:  "Continuous functions"
 categories: Topology
 use_math: true
 mathjax: true
 ---
+Continuous는 고등학교에서도 접하는 수학에서 중요하게 여기는 성질 중 하나이다.
+고등학교에서 continuous function의 정의는 다음과 같이 주어진다.
+<p>
+$$\lim_{x\rightarrow x_0+}f(x)=\lim_{x\rightarrow x_0-}f(x)=f(x_0).$$
+</p>
+고등학교 수준에서 continuous는 미분가능성과 밀접한 관련이 있다고 배운다.
+**미분가능한 함수는 연속이다.**는 문장은 고등학교 수학을 공부한 사람이라면
+지겹도록 외웠을 것이다. 이 continuous는 해석학에서 다시 한번 정교하고 엄밀하게
+정의된다.
+<p>
+$$\forall\epsilon >0, \exists \delta>0,0<|x-a|<\delta\Longrightarrow |f(x)-f(a)|<\epsilon.$$
+</p>
+이는 그 유명한 $\epsilon-\delta$ 논법으로 continuous를 가장 엄밀하게 정의하는 방법이다.
+풀어서 설명해보자면 다음과 같다:
+
+어떤 $0<\|x-a\|<\delta$인 $\delta>0$가 있을 때, 모든 $\epsilon>0$에 대해
+$\|f(x)-f(a)\|<\epsilon$가 만족하면 $f(x)$는 $x=a$에서 continuous하다.
+
+
+정의역의 어느 한 점 $x=a$에서 $\delta$만큼의 반경 내에 존재하는 모든 $x$를
+function $f(x)$로 mapping하여 치역의 원소 $f(x)$에 대응시켰을 때를 생각하는 것이다.
+이 때 $x=a$에 대응되는 $f(a)$의 주위에 모든 $f(x)$가 대응되면 $f(x)$가 $x=a$에서
+continuous를 만족한다고 부른다. 근데 수학은 보다 엄밀한 기준을 요구한다. *$f(a)$의 주위*는
+수학의 기준에서 너무 애매하다. 그래서 $\|f(x)-f(a)\|<\epsilon$라는 기준이 필요하다.
+중요한 점은 $\epsilon$이 0보다 큰 임의의 실수라는 점이다. $\epsilon$이 $0.1$이든 $0.001$이든
+$0.000\cdots$이든 mapping한 $f(x)$와 $f(a)$ 사이의 거리가 $\epsilon$보다는 작아야 한다.
+이런 엄격한 기준을 만족해야 $f(x)$는 겨우 $x=a$ 한 점에서 continuous하다.
+
+
+__________________________________________________________________
 
 Hausdorff space는 위상수학에서 주로 다루게 되는 space이다. 이 space가 어떻게 정의되는지
 먼저 살펴보자.
